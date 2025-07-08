@@ -11,7 +11,7 @@ VisionAI is a cutting-edge web application that combines facial recognition, emo
 ### 🔮 Palm Reading
 ![Palm Reading](https://github.com/user-attachments/assets/a75cae0d-159f-4139-a7a4-15cd8b033363)
 
-### 💻 Break Functionality Page
+### 💻 Reactaction Mode Page
 ![Break Functionality](https://github.com/user-attachments/assets/c4a69a3e-9fc3-4f2b-995d-23c137a9f436)
 
 ### 📱 Responsiveness
