@@ -315,14 +315,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Styled Components** - Beautiful CSS-in-JS solution
 - **Framer Motion** - Smooth animations made easy
 
-## 📞 Support
+## 💬 Feedback & Contributions
+This project is open to suggestions, improvements, and collaboration.  
+If you find a bug, have an idea, or want to contribute — feel free to open an issue or pull request!
 
-- **Issues**: [GitHub Issues](https://github.com/your-username/visionai-dashboard/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-username/visionai-dashboard/discussions)
-- **Email**: support@visionai.com
-
+Your feedback is always welcome.
 ---
-
-**Made with ❤️ by the VisionAI Team**
-
 *Experience the future of human-computer interaction today!*
