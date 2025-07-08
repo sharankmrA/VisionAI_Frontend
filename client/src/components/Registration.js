@@ -476,9 +476,8 @@ const Registration = ({ onRegister }) => {
         faceDescriptorLength: requestData.faceDescriptor.length
       });
 
-      const response = await axios.post('http://localhost:5000/api/auth/register', requestData);
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, requestData);
 
-      console.log('📥 [CLIENT] Server response:', response.data);
 
       if (response.data.success) {
         console.log('✅ [CLIENT] Registration successful!');

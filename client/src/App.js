@@ -76,7 +76,7 @@ function App() {
 
   const checkForRegisteredUsers = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/auth/check-users');
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/auth/check-users`);
       setHasRegisteredUsers(response.data.hasUsers);
     } catch (error) {
       console.error('Error checking for users:', error);

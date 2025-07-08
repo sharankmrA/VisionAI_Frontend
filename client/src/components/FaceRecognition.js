@@ -382,16 +382,12 @@ const FaceRecognition = ({ onLogin }) => {
         emotions[a] > emotions[b] ? a : b
       );
 
-      console.log('😊 [CLIENT] Detected emotion:', topEmotion);
-      console.log('🧬 [CLIENT] Sending face descriptor for authentication...');
-
       // Send to backend for authentication
-      const response = await axios.post('http://localhost:5000/api/auth/verify-face', {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/verify-face`, {
         faceDescriptor: Array.from(detection.descriptor),
         emotion: topEmotion
       });
 
-      console.log('📥 [CLIENT] Authentication response:', response.data);
 
       if (response.data.success) {
         console.log('✅ [CLIENT] Authentication successful!');
