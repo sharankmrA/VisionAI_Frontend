@@ -2,7 +2,23 @@
 
 VisionAI is a cutting-edge web application that combines facial recognition, emotion detection, and voice interaction to create an immersive AI assistant experience. Built with the MERN stack and featuring a stunning futuristic UI inspired by sci-fi interfaces.
 
-![VisionAI Banner](https://via.placeholder.com/800x300/000000/00FFFF?text=VISION+AI+DASHBOARD)
+### 📝 Register Page
+![Register Page](https://github.com/user-attachments/assets/c81c9a50-4dec-4c05-bb37-f12efa61385d)
+
+### 🖼️ Landing Page
+![Landing Page](https://github.com/user-attachments/assets/1c871cc7-84b0-4b30-be2f-4ff76d52d3e4)
+
+### 🔮 Palm Reading
+![Palm Reading](https://github.com/user-attachments/assets/a75cae0d-159f-4139-a7a4-15cd8b033363)
+
+### 💻 Relaxation Mode
+![Break Functionality](https://github.com/user-attachments/assets/c4a69a3e-9fc3-4f2b-995d-23c137a9f436)
+
+### 📱 Responsiveness
+![Responsive Screenshot 1](https://github.com/user-attachments/assets/fec25589-cab3-442e-a255-ef9ad3ab4d5e)
+![Responsive Screenshot 2](https://github.com/user-attachments/assets/bd2eb7fe-c13e-4e5d-b317-6f511f538ea9)
+
+
 
 ## ✨ Features
 
@@ -315,14 +331,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Styled Components** - Beautiful CSS-in-JS solution
 - **Framer Motion** - Smooth animations made easy
 
-## 📞 Support
+## 💬 Feedback & Contributions
+This project is open to suggestions, improvements, and collaboration.  
+If you find a bug, have an idea, or want to contribute — feel free to open an issue or pull request!
 
-- **Issues**: [GitHub Issues](https://github.com/your-username/visionai-dashboard/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-username/visionai-dashboard/discussions)
-- **Email**: support@visionai.com
-
+Your feedback is always welcome.
 ---
-
-**Made with ❤️ by the VisionAI Team**
-
 *Experience the future of human-computer interaction today!*
