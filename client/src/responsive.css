@@ -1,0 +1,590 @@
+/* VisionAI - Responsive Design CSS */
+
+/* ======================================
+   GLOBAL RESPONSIVE SETTINGS
+   ====================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Root variables for responsive scaling */
+:root {
+  --font-size-base: 16px;
+  --font-size-small: 14px;
+  --font-size-large: 18px;
+  --font-size-xlarge: 24px;
+  
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  
+  --grid-gap-sm: 16px;
+  --grid-gap-md: 20px;
+  --grid-gap-lg: 24px;
+}
+
+/* ======================================
+   DESKTOP/LAPTOP STYLES (1024px and above)
+   ====================================== */
+
+@media (min-width: 1024px) {
+  /* Dashboard Grid Layout */
+  .dashboard-container {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    grid-template-rows: auto 1fr;
+    gap: var(--grid-gap-lg);
+    padding: var(--spacing-lg);
+    min-height: 100vh;
+  }
+  
+  /* Header spans full width */
+  .dashboard-header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
+  }
+  
+  /* Sidebar styles */
+  .dashboard-sidebar {
+    padding: var(--spacing-md);
+  }
+  
+  /* Main content area */
+  .dashboard-main {
+    padding: var(--spacing-md);
+  }
+  
+  /* Project Grid for desktop */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--grid-gap-md);
+  }
+  
+  /* Video feed size */
+  .video-feed {
+    width: 200px;
+    height: 150px;
+  }
+  
+  /* Font sizes */
+  .neon-text {
+    font-size: var(--font-size-xlarge);
+  }
+  
+  .project-title {
+    font-size: var(--font-size-large);
+  }
+  
+  /* Button sizes */
+  .cyber-button {
+    padding: 12px 24px;
+    font-size: var(--font-size-base);
+  }
+  
+  .voice-button {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+}
+
+/* ======================================
+   TABLET STYLES (768px - 1023px)
+   ====================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Dashboard Grid Layout - Modified for tablets */
+  .dashboard-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    gap: var(--grid-gap-md);
+    padding: var(--spacing-md);
+    min-height: 100vh;
+  }
+  
+  /* Header */
+  .dashboard-header {
+    grid-column: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm);
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+  
+  /* Sidebars become horizontal on tablets */
+  .dashboard-sidebar {
+    padding: var(--spacing-sm);
+  }
+  
+  .dashboard-sidebar:first-of-type {
+    grid-row: 2;
+  }
+  
+  .dashboard-sidebar:last-of-type {
+    grid-row: 4;
+  }
+  
+  /* Main content */
+  .dashboard-main {
+    grid-row: 3;
+    padding: var(--spacing-sm);
+  }
+  
+  /* Project Grid for tablets */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--grid-gap-sm);
+  }
+  
+  /* Video feed size */
+  .video-feed {
+    width: 160px;
+    height: 120px;
+  }
+  
+  /* Font sizes */
+  .neon-text {
+    font-size: var(--font-size-large);
+  }
+  
+  .project-title {
+    font-size: var(--font-size-base);
+  }
+  
+  /* Button sizes */
+  .cyber-button {
+    padding: 10px 20px;
+    font-size: var(--font-size-small);
+  }
+  
+  .voice-button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  
+  /* Emotion display */
+  .emotion-display {
+    font-size: var(--font-size-small);
+    padding: 8px 16px;
+  }
+  
+  /* Command history */
+  .command-history {
+    max-height: 150px;
+  }
+  
+  /* Modal adjustments */
+  .modal-content {
+    max-width: 90%;
+    margin: var(--spacing-md);
+  }
+}
+
+/* ======================================
+   MOBILE STYLES (320px - 767px)
+   ====================================== */
+
+@media (max-width: 767px) {
+  /* Dashboard Grid Layout - Single column for mobile */
+  .dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--grid-gap-sm);
+    padding: var(--spacing-sm);
+    min-height: 100vh;
+  }
+  
+  /* Header */
+  .dashboard-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-sm);
+    gap: var(--spacing-xs);
+    text-align: center;
+  }
+  
+  .dashboard-header h2 {
+    font-size: var(--font-size-base);
+    margin: 0;
+  }
+  
+  /* User info section */
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
+  
+  /* Sidebars stack vertically */
+  .dashboard-sidebar {
+    padding: var(--spacing-sm);
+    order: 1;
+  }
+  
+  /* Main content */
+  .dashboard-main {
+    order: 2;
+    padding: var(--spacing-sm);
+  }
+  
+  /* Project Grid for mobile */
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--grid-gap-sm);
+  }
+  
+  /* Project cards */
+  .project-card {
+    padding: var(--spacing-sm);
+  }
+  
+  /* Video feed size */
+  .video-feed {
+    width: 120px;
+    height: 90px;
+  }
+  
+  /* Font sizes */
+  .neon-text {
+    font-size: var(--font-size-base);
+  }
+  
+  .project-title {
+    font-size: var(--font-size-small);
+  }
+  
+  /* Button sizes */
+  .cyber-button {
+    padding: 8px 16px;
+    font-size: var(--font-size-small);
+    width: 100%;
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .voice-button {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+  
+  /* Language toggle button */
+  .language-toggle {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+  
+  /* Emotion display */
+  .emotion-display {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  
+  /* Command history */
+  .command-history {
+    max-height: 120px;
+    font-size: 11px;
+  }
+  
+  /* Voice control section */
+  .voice-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
+  
+  .voice-controls-row {
+    display: flex;
+    gap: var(--spacing-xs);
+    align-items: center;
+  }
+  
+  /* Modal adjustments */
+  .modal-content {
+    max-width: 95%;
+    max-height: 90%;
+    margin: var(--spacing-sm);
+    padding: var(--spacing-sm);
+  }
+  
+  .modal-content h3 {
+    font-size: var(--font-size-base);
+  }
+  
+  .modal-content p, .modal-content li {
+    font-size: var(--font-size-small);
+  }
+  
+  /* Tech stack tags */
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .tech-tag {
+    font-size: 10px;
+    padding: 2px 8px;
+  }
+  
+  /* Welcome screen adjustments */
+  .welcome-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    width: 100%;
+  }
+  
+  .welcome-button {
+    width: 100%;
+    padding: var(--spacing-sm);
+  }
+}
+
+/* ======================================
+   SMALL MOBILE STYLES (320px - 479px)
+   ====================================== */
+
+@media (max-width: 479px) {
+  .dashboard-container {
+    padding: var(--spacing-xs);
+  }
+  
+  .dashboard-header,
+  .dashboard-sidebar,
+  .dashboard-main {
+    padding: var(--spacing-xs);
+  }
+  
+  .voice-button {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  .neon-text {
+    font-size: var(--font-size-small);
+  }
+  
+  .project-title {
+    font-size: 12px;
+  }
+  
+  .cyber-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .modal-content {
+    margin: var(--spacing-xs);
+    padding: var(--spacing-xs);
+  }
+}
+
+/* Show mobile quick actions only on mobile */
+.mobile-quick-actions {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-quick-actions {
+    display: block !important;
+  }
+}
+
+/* Hide desktop quick actions on mobile */
+@media (max-width: 767px) {
+  .dashboard-sidebar:last-of-type > div:last-of-type {
+    display: none;
+  }
+}
+
+/* Hide elements on mobile */
+.hide-mobile {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+/* Show only on mobile */
+.show-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .show-mobile {
+    display: block;
+  }
+}
+
+/* Hide elements on tablet */
+.hide-tablet {
+  display: block;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hide-tablet {
+    display: none;
+  }
+}
+
+/* Container max-width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+}
+
+/* Responsive text alignment */
+.text-center-mobile {
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .text-center-mobile {
+    text-align: center;
+  }
+}
+
+/* Responsive margin/padding helpers */
+.p-responsive {
+  padding: var(--spacing-sm);
+}
+
+@media (max-width: 767px) {
+  .p-responsive {
+    padding: var(--spacing-xs);
+  }
+}
+
+.m-responsive {
+  margin: var(--spacing-sm);
+}
+
+@media (max-width: 767px) {
+  .m-responsive {
+    margin: var(--spacing-xs);
+  }
+}
+
+/* ======================================
+   ANIMATION ADJUSTMENTS FOR MOBILE
+   ====================================== */
+
+@media (max-width: 767px) {
+  /* Reduce animation intensity on mobile for better performance */
+  .scan-lines {
+    animation-duration: 6s;
+  }
+  
+  .grid-pulse {
+    animation-duration: 4s;
+  }
+  
+  .emotion-pulse {
+    animation-duration: 3s;
+  }
+  
+  .voice-pulse {
+    animation-duration: 1.5s;
+  }
+}
+
+/* ======================================
+   TOUCH FRIENDLY STYLES
+   ====================================== */
+
+@media (hover: none) and (pointer: coarse) {
+  /* Touch-friendly button sizes */
+  .cyber-button,
+  .voice-button,
+  .language-toggle {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Remove hover effects on touch devices */
+  .cyber-button:hover,
+  .voice-button:hover,
+  .project-card:hover {
+    transform: none;
+  }
+  
+  /* Add active states instead */
+  .cyber-button:active,
+  .voice-button:active {
+    transform: scale(0.95);
+  }
+}
+
+/* ======================================
+   DARK MODE ADJUSTMENTS
+   ====================================== */
+
+@media (prefers-color-scheme: dark) {
+  /* Enhance dark mode for better visibility */
+  .dashboard-container {
+    background: radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%);
+  }
+  
+  .dashboard-sidebar,
+  .dashboard-main,
+  .project-card {
+    background: rgba(0, 255, 255, 0.08);
+  }
+}
+
+/* ======================================
+   REDUCED MOTION PREFERENCES
+   ====================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ======================================
+   HIGH CONTRAST MODE
+   ====================================== */
+
+@media (prefers-contrast: high) {
+  .neon-text {
+    text-shadow: none;
+    color: #ffffff;
+  }
+  
+  .cyber-button {
+    border-width: 3px;
+  }
+  
+  .dashboard-sidebar,
+  .dashboard-main {
+    border-width: 3px;
+  }
+}
