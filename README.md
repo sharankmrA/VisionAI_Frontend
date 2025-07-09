@@ -1,4 +1,4 @@
-# 🤖 VisionAI - Futuristic AI Assistant Dashboard
+# [🤖 VisionAI - Futuristic AI Assistant Dashboard](https://visionai-chi.vercel.app/)
 
 VisionAI is a cutting-edge web application that combines facial recognition, emotion detection, and voice interaction to create an immersive AI assistant experience. Built with the MERN stack and featuring a stunning futuristic UI inspired by sci-fi interfaces.
 
